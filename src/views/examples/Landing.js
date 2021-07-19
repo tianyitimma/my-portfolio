@@ -45,7 +45,7 @@ import {
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
-import CardsFooter from "components/Footers/CardsFooter.js";
+import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 // index page sections
 import Download from "../IndexSections/Download.js";
@@ -134,7 +134,7 @@ class Landing extends React.Component {
                             className="mt-4"
                             color="primary"
                             href="https://space-exploration-team-awesom.github.io/SpaceExploration/"
-                            onClick={e => e.preventDefault()}
+                            
                           >
                             Learn more
                           </Button>
@@ -144,9 +144,11 @@ class Landing extends React.Component {
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-success rounded-circle mb-4">
-                            <i className="ni ni-istanbul" />
-                          </div>
+                        <CardImg
+                            alt="..."
+                            src={busMall}
+                            top
+                          />
                           <h6 className="text-success text-uppercase">
                             Bus Mall
                           </h6>
@@ -158,7 +160,7 @@ class Landing extends React.Component {
                             className="mt-4"
                             color="success"
                             href="https://tianyitimma.github.io/busMall/"
-                            // onClick={e => e.preventDefault()}
+                            
                           >
                             Learn more
                           </Button>
@@ -168,9 +170,11 @@ class Landing extends React.Component {
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
-                            <i className="ni ni-planet" />
-                          </div>
+                        <CardImg
+                            alt="..."
+                            src={cookie}
+                            top
+                          />
                           <h6 className="text-warning text-uppercase">
                             Salmon Cookies
                           </h6>
@@ -182,7 +186,7 @@ class Landing extends React.Component {
                             className="mt-4"
                             color="warning"
                             href="https://tianyitimma.github.io/cookie-stand/"
-                            onClick={e => e.preventDefault()}
+                            
                           >
                             Learn more
                           </Button>
@@ -306,34 +310,37 @@ class Landing extends React.Component {
                   </Card>
                 </Col>
                 <Col md="6">
-                  <div className="pl-md-5">
-                    <div className="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
-                      <i className="ni ni-settings" />
-                    </div>
-                    <h3>Our customers</h3>
-                    <p className="lead">
-                      Don't let your uses guess by attaching tooltips and
-                      popoves to any element. Just make sure you enable them
-                      first via JavaScript.
-                    </p>
-                    <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
-                    </p>
-                    <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
-                    </p>
-                    <a
-                      className="font-weight-bold text-warning mt-5"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      A beautiful UI Kit for impactful websites
-                    </a>
-                  </div>
+                <Card className="bg-default shadow border-0">
+                    <CardImg
+                      alt="..."
+                      src={busMall}
+                      top
+                    />
+                    <blockquote className="card-blockquote">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="svg-bg"
+                        preserveAspectRatio="none"
+                        viewBox="0 0 583 95"
+                      >
+                        <polygon
+                          className="fill-default"
+                          points="0,52 583,95 0,95"
+                        />
+                        <polygon
+                          className="fill-default"
+                          opacity=".2"
+                          points="0,42 583,95 683,0 0,95"
+                        />
+                      </svg>
+                      <h4 className="display-3 font-weight-bold text-white">
+                        Bus Mall
+                      </h4>
+                      <p className="lead text-italic text-white">
+                        This project will find the most popular items in the catalog of assorted high-markup products to reduce the costs to print and distribute. 
+                      </p>
+                    </blockquote>
+                  </Card>
                 </Col>
               </Row>
             </Container>
@@ -353,6 +360,7 @@ class Landing extends React.Component {
           </section>
           
         </main>
+        <SimpleFooter />
       </>
     );
   }
